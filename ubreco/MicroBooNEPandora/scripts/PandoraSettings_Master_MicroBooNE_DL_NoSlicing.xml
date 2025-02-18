@@ -1,7 +1,7 @@
 <pandora>
     <!-- GLOBAL SETTINGS -->
     <IsMonitoringEnabled>false</IsMonitoringEnabled>
-    <ShouldDisplayAlgorithmInfo>false</ShouldDisplayAlgorithmInfo>
+    <ShouldDisplayAlgorithmInfo>true</ShouldDisplayAlgorithmInfo>
     <SingleHitTypeClusteringMode>true</SingleHitTypeClusteringMode>
 
     <!-- ALGORITHM SETTINGS -->
@@ -12,16 +12,15 @@
         <FilteredCaloHitListName>CaloHitList2D</FilteredCaloHitListName>
         <CurrentCaloHitListReplacement>CaloHitList2D</CurrentCaloHitListReplacement>
     </algorithm>
-
     <algorithm type = "LArVisualMonitoring">
         <CaloHitListNames>CaloHitListU CaloHitListV CaloHitListW</CaloHitListNames>
         <ShowDetector>true</ShowDetector>
     </algorithm>
 
-    <algorithm type = "MicroBooNEMaster">
+    <algorithm type = "MicroBooNEDLMaster">
         <CRSettingsFile>PandoraSettings_Cosmic_MicroBooNE.xml</CRSettingsFile>
-        <NuSettingsFile>PandoraSettings_Neutrino_MicroBooNE.xml</NuSettingsFile>
-        <SlicingSettingsFile>PandoraSettings_Slicing_MicroBooNE.xml</SlicingSettingsFile>
+        <NuSettingsFile>PandoraSettings_Neutrino_MicroBooNE_DL.xml</NuSettingsFile>
+        <SlicingSettingsFile>PandoraSettings_Slicing_MicroBooNE_NoSlicing.xml</SlicingSettingsFile>
         <StitchingTools>
             <tool type = "LArStitchingCosmicRayMerging"><ThreeDStitchingMode>true</ThreeDStitchingMode></tool>
             <tool type = "LArStitchingCosmicRayMerging"><ThreeDStitchingMode>false</ThreeDStitchingMode></tool>
@@ -47,5 +46,4 @@
         <ShowCurrentPfos>true</ShowCurrentPfos>
         <ShowDetector>true</ShowDetector>
     </algorithm>
-
 </pandora>
